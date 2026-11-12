@@ -2,24 +2,28 @@ const readline = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout,
 });
-readline.question("entrez votre nombre:", (test) => {
+readline.question("entrez le premier nombre:", (test) => {
     let nombre = Number(test);
-    let i;
-    console.log("=======multiplication========")
-    for (i = 0; i <= 10; i++) { 
-            console.log(nombre + " * " + i + " = " + (nombre * i));
-    }
-      console.log("=======division========");
-      for (i = 0; i <= 10; i++) {
-            console.log(nombre + " / " + i + " = " +(nombre/i));
-    }
-      console.log("=======soustraction========");
-      for (i = 0; i <= 10; i++) {
-            console.log(nombre + " - " + i + " = " +(nombre-i));
-    }
-      console.log("=======addition========");
-      for (i = 0; i <= 10; i++) {
-            console.log(nombre + " + " + i + " = " +(nombre+i));
-    }
-    readline.close();
+    readline.question("entrez le deuxieme nombre:", (test1) => {
+        let nombre1 = Number(test1);
+
+        console.log("=======multiplication========")
+
+        console.log(nombre + " * " + nombre1 + " = " + (nombre * nombre1));
+
+        console.log("=======division========");
+        let division = nombre / nombre1;
+        let div = parseInt(division);
+        console.log(nombre + " / " + nombre1 + " = " + div);
+
+        console.log("=======soustraction========");
+
+        console.log(nombre + " - " + nombre1 + " = " + (nombre - nombre1));
+
+        console.log("=======addition========");
+
+        console.log(nombre + " + " + nombre1 + " = " + (nombre + nombre1));
+
+        readline.close();
+    });
 });

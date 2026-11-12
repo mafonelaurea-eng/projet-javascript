@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <h1 class="" id="titre">Bonjour</h1>
+    <button id="monBouton">submit</button>
+</body>
+<script>
+    const letitre = document.getElementById("titre");
+    const lebouton = document.getElementById("monBouton");
+
+    lebouton.addEventListener("click", function() {
+        letitre.textContent = "le monde dit bonjour ";
+        letitre.style.color = 'purple';
+    })
+</script>
+</html>

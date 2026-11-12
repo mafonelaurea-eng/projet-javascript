@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    //  class Rectangle {
+    //     hauteur;
+    //     largeur;
+    //     constructor(hauteur , largeur){
+    //         this.hauteur = hauteur;
+    //         this.largeur = largeur;
+    //     }
+    //     get perimeter(){
+    //         return (this.hauteur + this.largeur) * 2;
+    //     }
+    //     get isvalid(){
+    //         return this.hauteur >0 && this.largeur > 0;
+    //     }
+    // }
+    // class Carre extends Rectangle{
+    //     constructor(largeur){
+    //         super(largeur,largeur)
+    //     }
+    //     isbiggerthan (shape){
+    //         return this.perimeter > shape.perimeter;
+    //     }
+    // }
+
+    // const rect = new Rectangle(12,14);
+    // console.log("le perimetre du rectangle est:",rect.perimeter);
+    // const valid = new Rectangle (-40,3);
+    // console.log("Cette figure est-elle valide ?",valid.isvalid);
+    // const c = new Carre(10);
+    // console.log("le perimetre du carre est : ",c.perimeter);
+    // console.log("Es ce que le perimetre du carre est superieure au perimetre du rectangle?",c.isbiggerthan(rect));
+
+    class Book {
+        titre;
+        nbre_page;
+        #page = 1;
+        static nbre_livre=0;
+        constructor(titre, nbre_page) {
+            this.titre = titre;
+            this.nbre_page = nbre_page;
+            Book.nbre_livre ++
+           
+        }
+        get page(){
+            return this.#page;
+        }
+        nextpage() {
+            if (this.#page < this.nbre_page) {
+                this.#page++;
+            }
+        }
+        static count_book(){
+            return Book.nbre_livre;
+        }
+        close() {
+                this.#page = 1;
+        }
+    }
+
+    // class library{
+    //     #books = []
+    //    addBook(book){
+    //     this.#books.push(book);
+    //    }
+    //    addBooks(books){
+    //         for(let book of books){
+    //             this.addBook(book);
+    //         }
+    //    }
+    //    findBooksbyletter(letter){
+    //     return this.#books.filter((book) => {
+    //         return book.titre[0].toLowercase() === letter.toLowercase();
+    //     })
+    //         const found = []
+    //         for(let book of this.#books){
+    //             if(book.titre[0].toLowerCase() === letter.toLowerCase())
+    //             found.push(book);
+    //         }
+    //         return found;
+    //    }
+       
+    // }
+
+    const livre = new Book("le seigneur des anneaux", 200);
+    console.log("Nous sommes a la page:",livre.page);
+    livre.nextpage();
+    console.log("La prochaine page est:",livre.page);
+    livre.close();
+     //const nbre_l = Book.count_book();
+   
+    console.log("page courante: ",livre.page);
+    const livr = new Book("tribu de capitoline", 500);
+     console.log("le nombre de livre est", Book.count_book());
+    
+
+    // const l = new library()
+    // l.addBook(livre);
+    // l.addBooks([
+    //     new book("tribu de capitoline", 400),
+    //     new book("tribu de capitoline", 260),
+    //     new book("tribu de capitoline", 790)
+    // ])
+    // console.log(l.findBooksbyletter('l'));
+</script>
+
+<body>
+
+</body>
+
+</html>

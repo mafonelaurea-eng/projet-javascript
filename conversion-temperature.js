@@ -5,6 +5,7 @@ const readline = require("readline").createInterface({
 readline.question("entrez la temperature en celsuis:", (test) =>{
     let temperature = Number(test);
     let conversion = ((temperature/1.8) + 32);
-    console.log(" la temperature en fahrenheit est:" + conversion);
+    let con = parseInt(conversion);
+    console.log(" la temperature en fahrenheit est:" + con);
     readline.close();
 })
