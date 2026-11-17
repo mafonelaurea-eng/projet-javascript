@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="">
+       
+        <form action="" class="max-w-md mx-auto mt-8 p-16 bg-white border border-gray-200 rounded-md mt-16 space-y-6">
+             <div class="text-center text-orange-600 font-bold text-xl">Inscription</div>
+            <div class=" flex flex-col">
+                <label for="" class="text-gray-700 font-medium">Nom complet:</label>
+                <input type="text"  class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-orange-500 focus:ring-orange-500" id="name">
+                 <div class="text-red-500 text-xs text-center"  hidden>Champ invalide</div>
+            </div>
+            <div class="flex flex-col">
+                <label for="" class="text-gray-700 font-medium">Adresse email:</label>
+                <input type="text" class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-orange-500 focus:ring-orange-500" id="mail">
+                 <div class="text-red-500 text-xs text-center"  hidden>Champ invalide</div>
+            </div>
+            <div class="flex flex-col">
+                <label for="" class="text-gray-700 font-medium">Mot de passe:</label>
+                <input type="password" class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-orange-500 focus:ring-orange-500" id="password1">
+                 <div class="text-red-500 text-xs text-center"  hidden>Champ invalide</div>
+            </div>
+            <div class="flex flex-col">
+                <label for="" class="text-gray-700 font-medium">Confirmer le mot de passe:</label>
+                <input type="password" class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-orange-500 focus:ring-orange-500" id="password2">
+                 <div class="text-red-500 text-xs text-center" hidden>Champ invalide</div>
+            </div>
+            <div class="">
+                <input type="checkbox" class="border focus:outline-none ">
+                <label for="" class="text-gray-700">J'accepte les conditions d'utilisation</label>
+            </div>
+            <div class="text-red-500 text-xs text-center" id="allInput" hidden>Veuillez renseigner tout les champs</div>
+            <div class="text-red-500 text-xs text-center" id="allPassword" hidden>Les deux mots de passe ne correspondent pas</div>
+            <div class="text-center">
+                  <button class="py-2 px-4 rounded-md bg-orange-500 text-white font-bold animate-pulse cursor-pointer" id="btnSubmit">S'inscrire</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="form-inscription.js"></script>
+
+</html>
