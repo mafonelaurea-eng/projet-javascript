@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="m-auto">
+        <p class="text-blue-600  text-2xl text-center font-extrabold mt-8">Listes des taches</p>
+        <button class="bg-blue-600 text-white  rounded-md cursor-pointer text-xl px-1 py-2" id="addTache">Ajouter tache</button>
+    </div>
+    <div class="overflow-x-auto mt-8">
+            <table class="min-w-full border border-gray-200  divide-y divide-gray-200" >
+        <thead class="bg-gray-50">
+            <tr>
+                <th class=" px-4 py-3 text-left font-semibold text-gray-900">Nombre</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900">Tache</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900">date debut</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900">date fin</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+            <tr>
+                <td>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div class="hidden flex justify-center items-center bg-black/40 fixed inset-0 w-full h-full" id="formulaire">
+        <form action="" class=" max-w-md mx-auto mt-8 p-6 bg-white border border-gray-300 flex flex-col">
+            <label for="nom" class="text-gray-500 text-md font-medium">Nom de la tache</label>
+            <input type="text" placeholder="Entrer votre nom" class="border b rounded-md p-2">
+            <label for="date" class="text-gray-500 text-md font-medium">date debut</label>
+            <input type="date" placeholder="" class="border rounded-md p-2">
+                <label for="date" class="text-gray-500 text-md font-medium">date fin</label>
+            <input type="date" placeholder="" class="border rounded-md p-2">
+            <button type="submit"
+                class="text-lg bg-blue-600  px-1 py-2 text-white rounded-md mt-4 ">Enregistrer</button>
+        </form>
+    </div>
+<script src="todo-list.js"></script>
+</body>
+
+</html>
