@@ -12,8 +12,8 @@ function readError(input, message) {
     error.classList.remove("hidden");
     if (input.type !== 'checkbox') {
         input.classList.add("border-red-500");
-        input.classList.remove("focus:border-orange-500");
-        input.classList.remove("focus:ring-orange-500");
+        input.classList.remove("focus:border-purple-500");
+        input.classList.remove("focus:ring-purple-500");
     }
 }
 function clearError(input) {
@@ -22,8 +22,8 @@ function clearError(input) {
     error.classList.add("hidden");
     if (input.type !== 'checkbox') {
         input.classList.remove("border-red-500");
-        input.classList.add("focus:border-orange-500");
-        input.classList.add("focus:ring-orange-500");
+        input.classList.add("focus:border-purple-500");
+        input.classList.add("focus:ring-purple-500");
     }
 }
 function validNom() {

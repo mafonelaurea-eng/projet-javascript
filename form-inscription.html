@@ -8,55 +8,82 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class=" bg-gradient-to-r from-purple-400">
     <div class="">
 
-        <form action="" class="max-w-md mx-auto mt-8 p-16 bg-white border border-gray-200 rounded-md mt-16 space-y-6"
+        <form action="" class="max-w-md mx-auto  px-16 py-12 bg-white border border-gray-200 rounded-md mt-4 space-y-4"
             id="form">
-            <p class="text-green-500 text-lg text-center hidden" id="message" >Inscription reussie</p>
-            <div class="text-center text-orange-600 font-bold text-xl">Inscription</div>
+            <p class="text-green-500 text-lg text-center hidden" id="message">Inscription reussie</p>
+            <div class="text-center text-purple-900 font-bold text-xl">Inscription</div>
             <div class=" flex flex-col">
                 <label for="" class="text-gray-700 font-medium">Nom complet:</label>
                 <input type="text"
-                    class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-orange-500 focus:ring-orange-500"
+                    class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-purple-500 focus:ring-purple-500"
                     id="name">
                 <p id="error-name" class="text-red-500 text-xs mt-1 hidden"></p>
             </div>
             <div class="flex flex-col">
                 <label for="" class="text-gray-700 font-medium">Adresse email:</label>
                 <input type="text"
-                    class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-orange-500 focus:ring-orange-500"
+                    class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-purple-500 focus:ring-purple-500"
                     id="mail">
                 <p id="error-mail" class="text-red-500 text-xs mt-1 hidden"></p>
             </div>
             <div class="flex flex-col">
                 <label for="" class="text-gray-700 font-medium">Mot de passe:</label>
                 <input type="password"
-                    class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-orange-500 focus:ring-orange-500"
+                    class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-purple-500 focus:ring-purple-500"
                     id="password1">
                 <p id="error-password1" class="text-red-500 text-xs mt-1 hidden"></p>
             </div>
             <div class="flex flex-col">
                 <label for="" class="text-gray-700 font-medium">Confirmer le mot de passe:</label>
                 <input type="password"
-                    class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-orange-500 focus:ring-orange-500"
+                    class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-purple-500 focus:ring-purple-500"
                     id="password2">
+
                 <p id="error-password2" class="text-red-500 text-xs mt-1 hidden"></p>
             </div>
             <div class="">
-                <input type="checkbox" class="border focus:outline-none " id="terms">
-                <label for="" class="text-gray-700">J'accepte les conditions d'utilisation</label>
-                  <p id="error-terms" class="text-red-500 text-xs mt-1 hidden"></p>
+                <input type="checkbox" class="border focus:outline-none cursor-pointer" id="terms">
+                <label for="" class="text-gray-700 text-xs">En cochant cette case, vous acceptez <a href=""><label
+                            class="text-purple-500 text-xs underline cursor-pointer">les politiques de
+                            confidentialite</label></a></label>
+                <p id="error-terms" class="text-red-500 text-xs mt-1 hidden"></p>
             </div>
-          
+
             <div class="text-center">
                 <button type="submit"
-                    class="py-2 px-4 rounded-md bg-orange-500 text-white font-bold animate-pulse cursor-pointer"
+                    class="py-2 w-full rounded-md bg-purple-900 text-white font-bold cursor-pointer hover:translate-y-[-15px] transition-all duration-500"
                     id="btnSubmit">S'inscrire</button>
+            </div>
+            <div class="class">
+                <p class="text-center text-gray-700">ou</p>
+            </div>
+            <div class="space-y-2">
+                <div
+                    class="flex justify-center py-2 w-full border border-gray-300 rounded-full text-gray-700 hover:border-purple-500 hover:bg-purple-100 cursor-pointer space-x-2">
+                    <img src="images/img1.icons8.png" alt="" class="h-6 w-6">
+                    <p class="">
+                        Continuer avec Google</p>
+                </div>
+
+                <div
+                    class="flex justify-center py-2 w-full border border-gray-300 rounded-full text-gray-700 hover:border-purple-500 hover:bg-purple-100 cursor-pointer space-x-2">
+                    <img src="images/img.icons8.png" alt="" class="h-6 w-6">
+                    <p class="">
+                        Continuer avec Facebook</p>
+                </div>
+                <!-- <p class="py-2 w-full border border-gray-300 rounded-full text-gray-700 hover:border-purple-500 hover:bg-purple-100 cursor-pointer">Continuer avec Apple</p> -->
+            </div>
+
+            <div class="text-center text-sm">
+                <p class="text-gray-700">Vous avez deja un compte ? <a href=""><label for=""
+                            class="text-purple-900 cursor-pointer font-bold">Se connecter</label> </a></p>
             </div>
         </form>
     </div>
-<script src="form-inscription.js"></script>
+    <script src="form-inscription.js"></script>
 </body>
 
 
