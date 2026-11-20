@@ -31,17 +31,68 @@
             </div>
             <div class="flex flex-col">
                 <label for="" class="text-gray-700 font-medium">Mot de passe:</label>
-                <input type="password"
-                    class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-purple-500 focus:ring-purple-500"
-                    id="password1">
+                <div class="relative mt-1">
+                    <input type="password"
+                        class="border border-gray-300 h-10 rounded-md w-full px-3 pr-10  focus:outline-none focus:ring-1 focus:border-purple-500 focus:ring-purple-500"
+                        id="password1">
+                    <button type="button" id="toggle-password1"
+                        class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 hover:text-purple-600 cursor-pointer">
+
+                        <svg id="eye-open-password1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye preview-icon">
+                            <path
+                                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+
+
+                        <svg id="eye-closed-password1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-eye-off preview-icon hidden">
+                            <path
+                                d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" />
+                            <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" />
+                            <path
+                                d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" />
+                            <path d="m2 2 20 20" />
+                        </svg>
+                    </button>
+                </div>
                 <p id="error-password1" class="text-red-500 text-xs mt-1 hidden"></p>
             </div>
             <div class="flex flex-col">
                 <label for="" class="text-gray-700 font-medium">Confirmer le mot de passe:</label>
-                <input type="password"
-                    class="border border-gray-300 h-10 rounded-md  focus:outline-none focus:ring-1 focus:border-purple-500 focus:ring-purple-500"
-                    id="password2">
+                <div class="relative mt-1">
+                    <input type="password"
+                        class="border border-gray-300 h-10 rounded-md w-full px-3 pr-10  focus:outline-none focus:ring-1 focus:border-purple-500 focus:ring-purple-500"
+                        id="password2">
+                    <button type="button" id="toggle-password2"
+                        class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 hover:text-purple-600 cursor-pointer">
 
+                        <svg id="eye-open-password2" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye preview-icon">
+                            <path
+                                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+
+
+                        <svg id="eye-closed-password2" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-eye-off preview-icon hidden">
+                            <path
+                                d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" />
+                            <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" />
+                            <path
+                                d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" />
+                            <path d="m2 2 20 20" />
+                        </svg>
+                    </button>
+                </div>
                 <p id="error-password2" class="text-red-500 text-xs mt-1 hidden"></p>
             </div>
             <div class="">

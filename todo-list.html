@@ -1,52 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+    <title>Gestion des tâches</title>
 </head>
 
-<body>
-    <div class="m-auto">
-        <p class="text-blue-600  text-2xl text-center font-extrabold mt-8">Listes des taches</p>
-        <button class="bg-blue-600 text-white  rounded-md cursor-pointer text-xl px-1 py-2" id="addTache">Ajouter tache</button>
-    </div>
-    <div class="overflow-x-auto mt-8">
-            <table class="min-w-full border border-gray-200  divide-y divide-gray-200" >
-        <thead class="bg-gray-50">
-            <tr>
-                <th class=" px-4 py-3 text-left font-semibold text-gray-900">Nombre</th>
-                <th class="px-4 py-3 text-left font-semibold text-gray-900">Tache</th>
-                <th class="px-4 py-3 text-left font-semibold text-gray-900">date debut</th>
-                <th class="px-4 py-3 text-left font-semibold text-gray-900">date fin</th>
-                <th class="px-4 py-3 text-left font-semibold text-gray-900">Actions</th>
-            </tr>
-        </thead>
-        <tbody class="divide-y divide-gray-200">
-            <tr>
-                <td>
-                    
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<body class="bg-gray-50 p-6">
+    <div class="max-w-full mx-auto">
+        <p class="text-blue-600 text-3xl text-center font-extrabold mt-4">Liste des tâches</p>
+
+      
+        <div class="flex flex-wrap justify-between items-center mt-8 gap-4 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-md cursor-pointer text-lg px-4 py-2 font-medium" id="addTache">
+                 Ajouter tâche
+            </button>
+
+            <div class="flex gap-6 text-gray-700 font-semibold">
+                <p>Total des tâches : <span id="totalTaches" class="text-blue-600 font-bold">0</span></p>
+                <p>Tâches restantes : <span id="tachesRestantes" class="text-orange-600 font-bold">0</span></p>
+            </div>
+        </div>
+        <div class="overflow-x-auto mt-6 bg-white rounded-lg  border border-gray-200">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="px-4 py-3 text-left font-semibold text-gray-900">Nombre</th>
+                        <th class="px-4 py-3 text-left font-semibold text-gray-900">Tâche</th>
+                        <th class="px-4 py-3 text-left font-semibold text-gray-900">Date début</th>
+                        <th class="px-4 py-3 text-left font-semibold text-gray-900">Date fin</th>
+                        <th class="px-4 py-3 text-left font-semibold text-gray-900">Actions</th>
+                    </tr>
+                </thead>
+              
+                <tbody id="listeTaches" class="divide-y divide-gray-200"></tbody>
+            </table>
+
+          
+            <p id="messageVide" class="text-center text-gray-500 py-8 font-medium">
+                Aucune tâche n'existe pour le moment.
+            </p>
+        </div>
     </div>
 
+   
     <div class="hidden flex justify-center items-center bg-black/40 fixed inset-0 w-full h-full" id="formulaire">
-        <form action="" class=" max-w-md mx-auto mt-8 p-6 bg-white border border-gray-300 flex flex-col">
-            <label for="nom" class="text-gray-500 text-md font-medium">Nom de la tache</label>
-            <input type="text" placeholder="Entrer votre nom" class="border b rounded-md p-2">
-            <label for="date" class="text-gray-500 text-md font-medium">date debut</label>
-            <input type="date" placeholder="" class="border rounded-md p-2">
-                <label for="date" class="text-gray-500 text-md font-medium">date fin</label>
-            <input type="date" placeholder="" class="border rounded-md p-2">
-            <button type="submit"
-                class="text-lg bg-blue-600  px-1 py-2 text-white rounded-md mt-4 ">Enregistrer</button>
+        <form id="formTache" class="w-full max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg border border-gray-300 flex flex-col gap-3">
+            <h2 class="text-xl font-bold text-gray-800 mb-2">Nouvelle tâche</h2>
+
+            <label for="nomTache" class="text-gray-600 text-sm font-medium">Nom de la tâche *</label>
+            <input type="text" id="nomTache" placeholder="Ex: Réviser JavaScript" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-500">
+
+            <label for="dateDebut" class="text-gray-600 text-sm font-medium">Date début</label>
+            <input type="date" id="dateDebut" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-500">
+
+            <label for="dateFin" class="text-gray-600 text-sm font-medium">Date fin</label>
+            <input type="date" id="dateFin" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-500">
+
+            <!-- Message d'erreur si champ vide -->
+            <p id="erreurForm" class="hidden text-red-600 text-sm font-medium">Le nom de la tâche ne peut pas être vide.</p>
+
+            <div class="flex justify-end gap-2 mt-4">
+                <button type="button" id="annulerTache" class="text-md bg-gray-200 hover:bg-gray-300 px-4 py-2 text-gray-800 rounded-md cursor-pointer">
+                    Annuler
+                </button>
+                <button type="submit" class="text-md bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white rounded-md cursor-pointer">
+                    Enregistrer
+                </button>
+            </div>
         </form>
     </div>
-<script src="todo-list.js"></script>
+
+    <script src="todo-list.js"></script>
 </body>
 
 </html>

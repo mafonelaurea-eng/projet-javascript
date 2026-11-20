@@ -6,6 +6,26 @@ const password1Form = document.getElementById("password1");
 const password2Form = document.getElementById("password2");
 const termsForm = document.getElementById("terms");
 const messageSucces = document.getElementById("message");
+const toggleBtn1 = document.getElementById("toggle-password1");
+const toggleBtn2 = document.getElementById("toggle-password2");
+const eyeOpen1 = document.getElementById("eye-open-password1");
+const eyeClosed1 = document.getElementById("eye-closed-password1");
+const eyeOpen2 = document.getElementById("eye-open-password2");
+const eyeClosed2 = document.getElementById("eye-closed-password2");
+
+toggleBtn1.addEventListener('click', () => {
+    const isPassword1 = password1Form.type === "password";
+    password1Form.type = isPassword1 ? "text" : "password";
+    eyeOpen1.classList.toggle("hidden");
+    eyeClosed1.classList.toggle("hidden");
+})
+toggleBtn2.addEventListener('click', () => {
+   
+    const isPassword2 = password2Form.type === "password";
+    password2Form.type = isPassword2 ? "text" : "password";
+    eyeOpen2.classList.toggle("hidden");
+    eyeClosed2.classList.toggle("hidden");
+})
 function readError(input, message) {
     const error = document.getElementById(`error-${input.id}`);
     error.textContent = message;
