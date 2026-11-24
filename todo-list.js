@@ -78,14 +78,13 @@ function creerTacheElement(nom, debut, fin) {
   
     const btnTerminer = document.createElement("button");
     btnTerminer.textContent = "Terminer";
-    btnTerminer.classList.add("bg-green-600", "hover:bg-green-700", "text-white", "px-3", "py-1", "rounded", "text-sm", "cursor-pointer");
+    btnTerminer.classList.add("bg-green-600", "hover:bg-green-700", "text-white", "px-4", "py-2", "rounded", "text-sm", "cursor-pointer");
 
     btnTerminer.addEventListener("click", () => {
        
         const ligneParente = btnTerminer.parentElement.parentElement;
         ligneParente.classList.toggle("terminee");
         ligneParente.classList.toggle("bg-green-50");
-        tdNom.classList.toggle("line-through");
         tdNom.classList.toggle("text-gray-400");
 
         if (ligneParente.classList.contains("terminee")) {
@@ -102,7 +101,7 @@ function creerTacheElement(nom, debut, fin) {
     });
     const btnSupprimer = document.createElement("button");
     btnSupprimer.textContent = "Supprimer";
-    btnSupprimer.classList.add("bg-red-600", "hover:bg-red-700", "text-white", "px-3", "py-1", "rounded", "text-sm", "cursor-pointer");
+    btnSupprimer.classList.add("bg-red-600", "hover:bg-red-700", "text-white", "px-4", "py-2", "rounded", "text-sm", "cursor-pointer");
 
     btnSupprimer.addEventListener("click", () => {
         const ligneASupprimer = btnSupprimer.parentElement.parentElement;
